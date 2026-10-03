@@ -152,6 +152,11 @@
     @keyframes curiosity-breathe{0%,100%{opacity:.75;filter:drop-shadow(0 0 2px #00f5d4)}50%{opacity:1;filter:drop-shadow(0 0 10px #00f5d4)}}
     @keyframes curiosity-orbit{0%{transform:translateX(0)}50%{transform:translateX(208px)}100%{transform:translateX(0)}}
     @media(prefers-reduced-motion:reduce){.curiosity-visual svg *{animation:none!important}}
+    .tool-chip{font:inherit;cursor:pointer;line-height:inherit;text-align:left;transition:color .2s,border-color .2s,background .2s,box-shadow .2s}
+    .tool-chip:hover,.tool-chip[aria-expanded="true"]{color:var(--cyan);border-color:#00f5d4;background:#00f5d410;box-shadow:0 0 12px #00f5d418}
+    .tool-chip:focus-visible{outline:1px solid var(--cyan);outline-offset:3px}
+    .tool-info:not([hidden]){grid-column:2;margin:11px 0 0;padding:9px 11px;border-left:2px solid var(--cyan);background:#00f5d408;color:#c7bfd5;font-size:11px;line-height:1.65}
+    @media(max-width:760px){.tool-info:not([hidden]){grid-column:1}}
 </style>
 </head>
 <body>
@@ -303,11 +308,11 @@
       <section id="toolkit">
         <div class="section-head"><div><div class="eyebrow">04 / Technical toolkit</div><h2>Tools, services &amp; technologies.</h2></div><p>A snapshot of technologies named in my professional experience and training.</p></div>
         <div class="toolkit">
-          <div class="tool-row"><div class="tool-label">Routing &amp; switching</div><div class="tags"><span class="tag">BGP</span><span class="tag">VLANs</span><span class="tag">Load balancing</span><span class="tag">Switches</span><span class="tag">Routers</span></div></div>
-          <div class="tool-row"><div class="tool-label">Network access</div><div class="tags"><span class="tag">WLC</span><span class="tag">Cisco ISE</span><span class="tag">RADIUS</span><span class="tag">Firewalls</span><span class="tag">Access points</span></div></div>
-          <div class="tool-row"><div class="tool-label">Monitoring</div><div class="tags"><span class="tag">PRTG</span><span class="tag">Zabbix</span></div></div>
-          <div class="tool-row"><div class="tool-label">ISP &amp; radio</div><div class="tags"><span class="tag">OLT / ONT</span><span class="tag">VoIP</span><span class="tag">MikroTik</span><span class="tag">Ubiquiti</span><span class="tag">Cambium</span><span class="tag">Ceragon</span><span class="tag">Siae</span><span class="tag">Ray</span></div></div>
-          <div class="tool-row"><div class="tool-label">Security &amp; systems</div><div class="tags"><span class="tag">Threat intelligence</span><span class="tag">Threat hunting</span><span class="tag">Incident handling</span><span class="tag">SQL</span><span class="tag">Hetman ERP</span></div></div>
+          <div class="tool-row" data-tool-row="1"><div class="tool-label">Routing &amp; switching</div><div class="tags"><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Border Gateway Protocol exchanges routing information between separate autonomous systems on the Internet.">BGP</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Virtual LANs divide a switched network into separate logical broadcast domains.">VLANs</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Distributes traffic across multiple links or systems to improve capacity and resilience.">Load balancing</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Connect devices within a local network and forward Ethernet frames to the correct port.">Switches</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Connect different IP networks and choose where packets should be forwarded.">Routers</button></div><p class="tool-info" id="tool-info-1" hidden></p></div>
+          <div class="tool-row" data-tool-row="2"><div class="tool-label">Network access</div><div class="tags"><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A Wireless LAN Controller centrally manages access points and enterprise Wi-Fi settings.">WLC</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Cisco Identity Services Engine applies identity-based access and network admission policies.">Cisco ISE</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A protocol that provides centralized authentication, authorization and accounting for network access.">RADIUS</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Inspect and control network traffic according to security rules.">Firewalls</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Provide Wi-Fi connectivity and bridge wireless clients to a wired network.">Access points</button></div><p class="tool-info" id="tool-info-1" hidden></p></div>
+          <div class="tool-row" data-tool-row="3"><div class="tool-label">Monitoring</div><div class="tags"><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A monitoring platform that tracks network devices, services, availability and performance.">PRTG</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="An open-source platform for monitoring infrastructure, collecting metrics and raising alerts.">Zabbix</button></div><p class="tool-info" id="tool-info-1" hidden></p></div>
+          <div class="tool-row" data-tool-row="4"><div class="tool-label">ISP &amp; radio</div><div class="tags"><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Optical Line Terminal and Optical Network Terminal are provider and customer endpoints in a fibre access network.">OLT / ONT</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Voice over Internet Protocol carries phone calls over IP networks.">VoIP</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A network equipment vendor known for routers and its RouterOS network operating system.">MikroTik</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A networking vendor offering wireless, switching and routing equipment.">Ubiquiti</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A networking vendor focused on wireless broadband and enterprise connectivity.">Cambium</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A vendor of wireless backhaul and packet microwave transport systems.">Ceragon</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A vendor of microwave radio links used for network transport and backhaul.">Siae</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="A vendor of point-to-point wireless link equipment used to connect network sites.">Ray</button></div><p class="tool-info" id="tool-info-1" hidden></p></div>
+          <div class="tool-row" data-tool-row="5"><div class="tool-label">Security &amp; systems</div><div class="tags"><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Information about threat actors, tools and activity that helps guide security decisions.">Threat intelligence</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Proactively searches systems and network data for signs of malicious activity.">Threat hunting</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="The process of identifying, containing, investigating and resolving security incidents.">Incident handling</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="Structured Query Language is used to query and manage data in relational databases.">SQL</button><button class="tag tool-chip" type="button" aria-expanded="false" aria-controls="tool-info-5" data-info="An enterprise resource planning platform used to manage business operations and data.">Hetman ERP</button></div><p class="tool-info" id="tool-info-1" hidden></p></div>
         </div>
       </section>
 
@@ -375,6 +380,22 @@
         }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
         revealItems.forEach((item) => revealObserver.observe(item));
       }
+    </script>
+<script>
+      const toolkit = document.querySelector("#toolkit .toolkit");
+      if (toolkit) toolkit.addEventListener("click", (event) => {
+        const button = event.target.closest(".tool-chip");
+        if (!button) return;
+        const info = document.getElementById(button.getAttribute("aria-controls"));
+        const opening = button.getAttribute("aria-expanded") !== "true";
+        toolkit.querySelectorAll(".tool-chip").forEach((chip) => chip.setAttribute("aria-expanded", "false"));
+        toolkit.querySelectorAll(".tool-info").forEach((panel) => { panel.hidden = true; panel.textContent = ""; });
+        if (opening && info) {
+          button.setAttribute("aria-expanded", "true");
+          info.textContent = button.dataset.info;
+          info.hidden = false;
+        }
+      });
     </script>
 <script>document.querySelectorAll(".company-logo img").forEach((logo)=>logo.addEventListener("error",()=>{logo.hidden=true;const fallback=logo.nextElementSibling;if(fallback)fallback.hidden=false;}));</script>
 </body>
