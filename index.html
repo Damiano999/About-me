@@ -27,7 +27,31 @@
     @media(max-width:760px){.wrap{width:min(100% - 34px,620px)}.topbar{height:68px}.navlinks{gap:12px;font-size:9px}.hero{grid-template-columns:1fr;padding:65px 0;gap:40px;min-height:auto}.network{min-height:0}.section-head{align-items:start;flex-direction:column}.cards{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr;gap:16px}.timeline{grid-template-columns:1fr}.tool-row{grid-template-columns:1fr;gap:8px}.contact{align-items:flex-start;flex-direction:column}.contact .btn{align-self:flex-start}}
     @media(max-width:480px){.wrap{width:calc(100% - 30px)}.navlinks{gap:9px}.navlinks a{font-size:8px}.hero{padding:52px 0}.lead{font-size:15px}.cards{grid-template-columns:1fr}.section-head h2{font-size:33px}.facts{gap:14px}.term-foot{font-size:8px}.contact{padding:25px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
+      @keyframes fade-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes neon-breathe{0%,100%{text-shadow:0 0 12px #00f5d433}50%{text-shadow:0 0 26px #00f5d4aa,0 0 48px #8b5cf644}}
+    @keyframes pulse-ring{0%{transform:scale(.86);opacity:.72}70%,100%{transform:scale(1.17);opacity:0}}
+    @keyframes scan{0%{transform:translateY(-110%)}100%{transform:translateY(420%)}}
+    @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    @keyframes dash-flow{to{stroke-dashoffset:-40}}
+    @keyframes flicker{0%,96%,100%{opacity:1}97%{opacity:.86}98%{opacity:.96}}
+    html{scroll-behavior:smooth}
+    .hero>div:first-child{animation:fade-rise .8s cubic-bezier(.2,.75,.25,1) both}
+    .terminal{animation:fade-rise .9s .12s cubic-bezier(.2,.75,.25,1) both}
+    h1 span{animation:neon-breathe 3.6s ease-in-out infinite}
+    .terminal:after{height:22%;inset:0 0 auto;background:linear-gradient(180deg,transparent,#00f5d40c,transparent);animation:scan 7s linear infinite}
+    .network{animation:drift 5s ease-in-out infinite}
+    .network g[stroke-dasharray]{animation:dash-flow 8s linear infinite}
+    .pulse{position:relative}
+    .pulse:after{content:"";position:absolute;inset:-4px;border:1px solid var(--lime);border-radius:50%;animation:pulse-ring 1.8s ease-out infinite}
+    .card,.item{transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+    .card:hover,.item:hover{transform:translateY(-5px);border-color:#00f5d488;box-shadow:0 10px 32px #00f5d415,0 0 14px #8b5cf615}
+    .btn{transition:transform .2s ease,box-shadow .2s ease,color .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 22px #00f5d477}
+    .tag{transition:color .2s ease,border-color .2s ease,background .2s ease}
+    .tag:hover{color:var(--cyan);border-color:var(--cyan);background:#00f5d410}
+    .section-head,.about-grid,.cards,.timeline,.toolkit,.contact{animation:fade-rise .7s both}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
   <div class="wrap">
