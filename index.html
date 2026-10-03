@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07111d">
-  <meta name="description" content="Damian Winiarski — Network and Security Specialist at Eltel Networks, working across enterprise networking, infrastructure and Blue Team security.">
+  <meta name="description" content="Damian Winiarski — network and security specialist. Professional experience, technical toolkit, education and cybersecurity interests.">
   <title>Damian Winiarski | Networks & Security</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
     .timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.item{padding:22px;border:1px solid var(--line);border-radius:9px;position:relative}.item .when{color:var(--cyan);font:11px "DM Mono",monospace}.item h3{font-size:16px;margin:9px 0 5px}.item p{margin:0;color:var(--muted);font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{font-size:10px;color:#bcd0d5;padding:5px 8px;border:1px solid #2a4351;border-radius:4px}
     .contact{display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid #285252;background:linear-gradient(120deg,#0b292eaa,#0c1c29);padding:30px;border-radius:10px}.contact h2{font-size:clamp(24px,4vw,36px);letter-spacing:-.05em;margin:3px 0}.contact p{margin:0;color:var(--muted);font-size:13px}
     footer{padding:25px 0 32px;display:flex;justify-content:space-between;color:#718692;font:10px "DM Mono",monospace}
-    @media(max-width:760px){.wrap{width:min(100% - 32px,600px)}.topbar{height:66px}.navlinks{gap:15px;font-size:10px}.hero{grid-template-columns:1fr;padding:66px 0;gap:43px;min-height:auto}.network{min-height:0}.section-head{align-items:start;flex-direction:column}.cards{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:14px}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.contact .btn{align-self:flex-start}}
+    .toolkit{border:1px solid var(--line);border-radius:9px;background:#0b1926aa}.tool-row{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:18px 20px;border-bottom:1px solid #ffffff12;align-items:center}.tool-row:last-child{border-bottom:0}.tool-label{font:12px "DM Mono",monospace;color:var(--cyan)}.tool-row .tags{margin:0}\n    @media(max-width:760px){.wrap{width:min(100% - 32px,600px)}.topbar{height:66px}.navlinks{gap:15px;font-size:10px}.hero{grid-template-columns:1fr;padding:66px 0;gap:43px;min-height:auto}.network{min-height:0}.section-head{align-items:start;flex-direction:column}.cards{grid-template-columns:1fr} .about-grid{grid-template-columns:1fr;gap:14px}.timeline{grid-template-columns:1fr}.tool-row{grid-template-columns:1fr;gap:9px}.contact{align-items:flex-start;flex-direction:column}.contact .btn{align-self:flex-start}}
     @media(max-width:430px){.navlinks{gap:10px}.navlinks a{font-size:9px}.lead{font-size:15px}.facts{grid-template-columns:1fr 1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
@@ -31,15 +31,15 @@
   <div class="wrap">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Damian Winiarski home">DW<span>.</span></a>
-      <nav class="navlinks" aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#focus">FOCUS</a><a href="#background">BACKGROUND</a><a href="#contact">CONTACT</a></nav>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#about">PROFILE</a><a href="#expertise">EXPERTISE</a><a href="#career">CAREER</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a></nav>
     </header>
     <main>
       <section class="hero" id="home" style="border:0">
         <div>
-          <div class="eyebrow">Network & Security Specialist · Eltel Networks</div>
+          <div class="eyebrow">Network &amp; Security Specialist · Eltel Networks</div>
           <h1>Damian<br><span>Winiarski</span></h1>
-          <p class="lead">I’m a Network and Security Specialist at Eltel Networks, designing and maintaining enterprise network environments while supporting security operations, incident response and Blue Team threat hunting.</p>
-          <div class="actions"><a class="btn primary" href="#about">Get to know me <span aria-hidden="true">↘</span></a><a class="btn" href="https://www.linkedin.com/in/damian-winiarski" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div>
+          <p class="lead">I build and support reliable network environments, from ISP infrastructure and enterprise connectivity to security monitoring and Blue Team operations.</p>
+          <div class="actions"><a class="btn primary" href="#career">Explore my experience <span aria-hidden="true">↘</span></a><a class="btn" href="https://www.linkedin.com/in/damian-winiarski" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div>
         </div>
         <div class="terminal" aria-label="Illustration of a secure network topology">
           <div class="term-head"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="term-title">network_topology.map</span></div>
@@ -48,48 +48,90 @@
             <rect width="520" height="350" fill="url(#grid)"/><circle cx="260" cy="175" r="150" fill="url(#glow)"/>
             <g fill="none" stroke="#31505f" stroke-width="1.2"><path d="M86 107 188 144l125-52 104 69-85 105-132-27-114 47"/><path d="m188 144 12 95m113-147 19 174m85-105-104 36m-227-90 28 138m114-101 104-42"/></g>
             <g fill="none" stroke="#54e0d0" stroke-opacity=".44" stroke-dasharray="4 6"><circle cx="260" cy="175" r="117"/><circle cx="260" cy="175" r="67"/></g>
-            <g fill="#07111d" stroke="#54e0d0" stroke-width="2">
-              <rect x="172" y="128" width="32" height="32" rx="7"/><rect x="297" y="76" width="32" height="32" rx="7"/><rect x="401" y="145" width="32" height="32" rx="7"/><rect x="316" y="253" width="32" height="32" rx="7"/><rect x="185" y="223" width="32" height="32" rx="7"/><rect x="70" y="264" width="32" height="32" rx="7"/><rect x="58" y="91" width="32" height="32" rx="7"/>
-            </g>
+            <g fill="#07111d" stroke="#54e0d0" stroke-width="2"><rect x="172" y="128" width="32" height="32" rx="7"/><rect x="297" y="76" width="32" height="32" rx="7"/><rect x="401" y="145" width="32" height="32" rx="7"/><rect x="316" y="253" width="32" height="32" rx="7"/><rect x="185" y="223" width="32" height="32" rx="7"/><rect x="70" y="264" width="32" height="32" rx="7"/><rect x="58" y="91" width="32" height="32" rx="7"/></g>
             <g fill="#54e0d0"><circle cx="188" cy="144" r="3"/><circle cx="313" cy="92" r="3"/><circle cx="417" cy="161" r="3"/><circle cx="332" cy="269" r="3"/><circle cx="201" cy="239" r="3"/><circle cx="86" cy="280" r="3"/><circle cx="74" cy="107" r="3"/></g>
             <g font-family="monospace" font-size="9" fill="#9db5c0"><text x="166" y="119">CORE</text><text x="292" y="67">EDGE</text><text x="401" y="136">GATEWAY</text><text x="310" y="301">NODE_04</text><text x="182" y="273">NODE_05</text><text x="61" y="316">WAN</text><text x="51" y="82">ISP</text></g>
             <g transform="translate(249 164)"><path d="M11 0 22 4v9c0 8-5 13-11 16C5 26 0 21 0 13V4Z" fill="#0e2930" stroke="#c8f36a" stroke-width="1.5"/><path d="m6 13 4 4 7-8" fill="none" stroke="#c8f36a" stroke-width="2"/></g>
           </svg>
-          <div class="term-foot"><span><i class="pulse"></i>LINK STATUS: SECURE</span><span>7 NODES · 2 ZONES</span></div>
+          <div class="term-foot"><span><i class="pulse"></i>NETWORK STATUS: MONITORED</span><span>ROUTING · ACCESS · SECURITY</span></div>
         </div>
       </section>
+
       <section id="about">
         <div class="about-grid">
-          <div><div class="eyebrow">01 / About</div><h2>Curious about how the network holds together.</h2></div>
-          <div><p class="about-copy">I’m Damian, a Network and Security Specialist at Eltel Networks. I configure and manage switches, firewalls and wireless access points; design and modernize on-premises and cloud network environments; and monitor service performance and availability. My role also includes enterprise services such as WLC, ISE and RADIUS, security incident handling, collaboration with penetration testing teams, and Blue Team threat intelligence and hunting.</p>
-            <div class="facts"><div class="fact"><b>Based in</b><span>Rumia, Poland</span></div><div class="fact"><b>Current role</b><span>Network &amp; Security Specialist</span></div><div class="fact"><b>Languages</b><span>Polish (native) · English (B2)</span></div><div class="fact"><b>Monitoring</b><span>PRTG · Zabbix</span></div></div>
+          <div><div class="eyebrow">01 / Profile</div><h2>Keeping people and systems connected.</h2></div>
+          <div>
+            <p class="about-copy">I’m a networking and security specialist with experience in both an Internet service provider environment and enterprise networks. At Eltel Networks, I work across network design and modernization, infrastructure monitoring, enterprise access services and security operations. Earlier ISP work gave me a practical grounding in routing, switching, radio links and customer connectivity.</p>
+            <p class="about-copy">I’m especially interested in the connection between dependable infrastructure and effective security: understanding how a service is built, spotting when its behaviour changes, and working with the right teams to restore or improve it.</p>
+            <div class="facts"><div class="fact"><b>Based in</b><span>Rumia, Poland</span></div><div class="fact"><b>Current role</b><span>Network &amp; Security Specialist</span></div><div class="fact"><b>Languages</b><span>Polish (native) · English (B2)</span></div><div class="fact"><b>Monitoring tools</b><span>PRTG · Zabbix</span></div></div>
           </div>
         </div>
       </section>
-      <section id="focus">
-        <div class="section-head"><div><div class="eyebrow">02 / Areas of interest</div><h2>Connecting the pieces.</h2></div><p>Hands-on experience across enterprise networks, ISP operations and security monitoring.</p></div>
+
+      <section id="expertise">
+        <div class="section-head"><div><div class="eyebrow">02 / Expertise</div><h2>Work across the network stack.</h2></div><p>Practical responsibilities spanning design, day-to-day operations and security response.</p></div>
         <div class="cards">
-          <article class="card"><span class="index">01 — ENTERPRISE NETWORKS</span><h3>Network design &amp; operations</h3><p>Switching, routing, firewalls, access points, BGP, VLANs, load balancing and hybrid on-premises and cloud environments.</p></article>
-          <article class="card"><span class="index">02 — SERVICES &amp; MONITORING</span><h3>Infrastructure availability</h3><p>Monitoring networks with PRTG and Zabbix and managing enterprise services including WLC, ISE and RADIUS.</p></article>
-          <article class="card"><span class="index">03 — BLUE TEAM</span><h3>Security operations</h3><p>Security systems administration, incident handling, threat intelligence and threat hunting, in collaboration with penetration testing teams.</p></article>
+          <article class="card"><span class="index">01 — DESIGN &amp; OPERATIONS</span><h3>Enterprise networking</h3><p>Configure and manage switches, firewalls and access points. Design, develop and modernize on-premises and cloud network environments.</p></article>
+          <article class="card"><span class="index">02 — AVAILABILITY</span><h3>Monitoring &amp; troubleshooting</h3><p>Monitor infrastructure performance and availability with PRTG and Zabbix; investigate reported network issues, including outages.</p></article>
+          <article class="card"><span class="index">03 — ACCESS SERVICES</span><h3>Identity &amp; wireless</h3><p>Manage enterprise network services including wireless LAN controllers, Cisco ISE and RADIUS.</p></article>
+          <article class="card"><span class="index">04 — SECURITY OPERATIONS</span><h3>Blue Team activities</h3><p>Administer security systems, handle security incidents and contribute to threat intelligence and threat hunting.</p></article>
+          <article class="card"><span class="index">05 — ISP NETWORKS</span><h3>Routing &amp; connectivity</h3><p>Configure BGP, VLANs and load balancing, customer access devices, VoIP and point-to-point radio links.</p></article>
+          <article class="card"><span class="index">06 — COLLABORATION</span><h3>Working across teams</h3><p>Coordinate with network solution providers, penetration testing teams and Data Center colleagues; support end users and field workers.</p></article>
         </div>
       </section>
-      <section id="background">
-        <div class="section-head"><div><div class="eyebrow">03 / Background</div><h2>Experience &amp; education.</h2></div></div>
+
+      <section id="career">
+        <div class="section-head"><div><div class="eyebrow">03 / Career</div><h2>Professional experience.</h2></div><p>Roles across network security, ISP administration, technical support and IT services.</p></div>
         <div class="timeline">
-          <article class="item"><div class="when">JUL 2024 — PRESENT · ELTEL NETWORKS</div><h3>Network and Security Specialist</h3><p>Designing and modernizing on-premises and cloud networks; managing switches, firewalls, access points and enterprise services. Monitoring availability with PRTG and Zabbix, handling security incidents, and carrying out Blue Team threat intelligence and hunting.</p><div class="tags"><span class="tag">NETWORK SECURITY</span><span class="tag">PRTG</span><span class="tag">ZABBIX</span><span class="tag">WLC · ISE · RADIUS</span></div></article>
-          <article class="item"><div class="when">JUL 2022 — JUL 2024 · WAVE (ISP)</div><h3>Network Administrator</h3><p>Configured switches, routers, OLT/ONT and VoIP; worked with radio links, BGP, VLANs and load balancing; designed network solutions and troubleshot service issues.</p><div class="tags"><span class="tag">BGP</span><span class="tag">ROUTING &amp; SWITCHING</span><span class="tag">WIRELESS LINKS</span></div></article>
-          <article class="item"><div class="when">JUL 2017 — JUL 2021 · BATTLESTATE GAMES</div><h3>Technical Support Specialist</h3><p>Resolved issues involving games, the forum and website; handled customer support tickets and moderated social media content.</p></article>
-          <article class="item"><div class="when">JUL 2019 — AUG 2019 · SLYTECH.NET</div><h3>Technical Services Specialist</h3><p>Supported ICT networks and devices, including troubleshooting, repair and configuration.</p></article>
-          <article class="item"><div class="when">JUL 2018 — AUG 2018 · PROKHARD</div><h3>Implementation Department Intern</h3><p>Created SQL scripts, worked with databases, and installed and configured the Hetman ERP platform.</p><div class="tags"><span class="tag">SQL</span><span class="tag">DATABASES</span><span class="tag">ERP</span></div></article>
-          <article class="item"><div class="when">FEB 2023 — OCT 2024 · GDYNIA</div><h3>MSc, Electronics and Telecommunications</h3><p>Gdynia Maritime University.</p></article>
-          <article class="item"><div class="when">OCT 2019 — FEB 2023 · GDYNIA</div><h3>Engineering degree, Electronics and Telecommunications</h3><p>Gdynia Maritime University.</p></article>
-          <article class="item"><div class="when">SEP 2015 — APR 2019 · GDYNIA</div><h3>IT Technician</h3><p>Secondary Technical School of Electronics No. 1 in Gdynia. Vocational qualifications E.12, E.13 and E.14.</p></article>
-          <article class="item"><div class="when">PROFESSIONAL DEVELOPMENT</div><h3>Networking, cloud and cybersecurity</h3><p>Courses in Cisco networking, Microsoft Azure administration and network solutions, and practical cybersecurity through Sekurak Academy and Netsecurity Master.</p><div class="tags"><span class="tag">CCNA</span><span class="tag">AZ-104</span><span class="tag">AZ-700</span><span class="tag">SEKURAK</span></div></article>
+          <article class="item"><div class="when">JUL 2024 — PRESENT · ELTEL NETWORKS</div><h3>Network and Security Specialist</h3><p>Design, develop and modernize on-premises and cloud network environments. Configure and manage switches, firewalls and access points, and administer enterprise services such as WLC, ISE and RADIUS. Monitor availability with PRTG and Zabbix, investigate client-reported issues and outages, and handle security incidents. Carry out Blue Team threat intelligence and threat hunting, collaborate with penetration testing teams and work with the Data Center team.</p><div class="tags"><span class="tag">NETWORK DESIGN</span><span class="tag">PRTG · ZABBIX</span><span class="tag">WLC · ISE · RADIUS</span><span class="tag">BLUE TEAM</span></div></article>
+          <article class="item"><div class="when">JUL 2022 — JUL 2024 · WAVE (ISP)</div><h3>Network Administrator</h3><p>Configured switches, routers, OLT, ONT and VoIP equipment. Worked with radio links using MikroTik, Ubiquiti, Cambium, Ceragon, Siae and Ray equipment. Configured BGP, VLANs and load balancing; designed and implemented network solutions; improved the quality of network nodes and links; troubleshot network problems; supported field workers remotely and handled business and residential customer tickets.</p><div class="tags"><span class="tag">BGP</span><span class="tag">VLANs</span><span class="tag">OLT · ONT · VoIP</span><span class="tag">RADIO LINKS</span></div></article>
+          <article class="item"><div class="when">JUL 2017 — JUL 2021 · BATTLESTATE GAMES</div><h3>Technical Support Specialist</h3><p>Troubleshot issues with games, the forum and website; handled customer support tickets and moderated social media content.</p><div class="tags"><span class="tag">TECHNICAL SUPPORT</span><span class="tag">CUSTOMER SERVICE</span></div></article>
+          <article class="item"><div class="when">JUL 2019 — AUG 2019 · SLYTECH.NET</div><h3>Technical Services Specialist</h3><p>Worked with ICT networks and devices, resolving issues and repairing and configuring network equipment.</p></article>
+          <article class="item"><div class="when">JUL 2018 — AUG 2018 · PROKHARD</div><h3>Junior Specialist, Implementation Department · Intern</h3><p>Created SQL scripts, worked with databases, and installed and configured the Hetman ERP platform.</p><div class="tags"><span class="tag">SQL</span><span class="tag">DATABASES</span><span class="tag">ERP</span></div></article>
         </div>
       </section>
+
+      <section id="toolkit">
+        <div class="section-head"><div><div class="eyebrow">04 / Technical toolkit</div><h2>Tools, services &amp; technologies.</h2></div><p>A snapshot of technologies named in my professional experience and training.</p></div>
+        <div class="toolkit">
+          <div class="tool-row"><div class="tool-label">Routing &amp; switching</div><div class="tags"><span class="tag">BGP</span><span class="tag">VLANs</span><span class="tag">Load balancing</span><span class="tag">Switches</span><span class="tag">Routers</span></div></div>
+          <div class="tool-row"><div class="tool-label">Network access</div><div class="tags"><span class="tag">WLC</span><span class="tag">Cisco ISE</span><span class="tag">RADIUS</span><span class="tag">Firewalls</span><span class="tag">Access points</span></div></div>
+          <div class="tool-row"><div class="tool-label">Monitoring</div><div class="tags"><span class="tag">PRTG</span><span class="tag">Zabbix</span></div></div>
+          <div class="tool-row"><div class="tool-label">ISP &amp; radio</div><div class="tags"><span class="tag">OLT / ONT</span><span class="tag">VoIP</span><span class="tag">MikroTik</span><span class="tag">Ubiquiti</span><span class="tag">Cambium</span><span class="tag">Ceragon</span><span class="tag">Siae</span><span class="tag">Ray</span></div></div>
+          <div class="tool-row"><div class="tool-label">Security &amp; systems</div><div class="tags"><span class="tag">Threat intelligence</span><span class="tag">Threat hunting</span><span class="tag">Incident handling</span><span class="tag">SQL</span><span class="tag">Hetman ERP</span></div></div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="section-head"><div><div class="eyebrow">05 / Education</div><h2>Education &amp; qualifications.</h2></div><p>Formal studies in electronics and telecommunications, supported by vocational IT qualifications.</p></div>
+        <div class="timeline">
+          <article class="item"><div class="when">FEB 2023 — OCT 2024 · GDYNIA</div><h3>Master’s degree · Electronics and Telecommunications</h3><p>Gdynia Maritime University. The LinkedIn profile describes a thesis on satellite broadband Internet access systems, using OneWeb technical solutions as an example.</p><div class="tags"><span class="tag">TELECOMMUNICATIONS</span><span class="tag">SATELLITE INTERNET</span></div></article>
+          <article class="item"><div class="when">OCT 2019 — FEB 2023 · GDYNIA</div><h3>Engineer’s degree · Electronics and Telecommunications</h3><p>Gdynia Maritime University.</p></article>
+          <article class="item"><div class="when">SEP 2015 — APR 2019 · GDYNIA</div><h3>IT Technician</h3><p>Secondary Technical School of Electronics No. 1 in Gdynia.</p><div class="tags"><span class="tag">E.12 · COMPUTER HARDWARE</span><span class="tag">E.13 · NETWORKS</span><span class="tag">E.14 · WEB &amp; DATABASES</span></div></article>
+        </div>
+      </section>
+
+      <section id="development">
+        <div class="section-head"><div><div class="eyebrow">06 / Professional development</div><h2>Courses &amp; credentials.</h2></div><p>Ongoing learning in networking, cloud infrastructure and cybersecurity.</p></div>
+        <div class="cards">
+          <article class="card"><span class="index">CISCO</span><h3>CCNA</h3><p>Cisco Certified Network Associate course.</p></article>
+          <article class="card"><span class="index">MICROSOFT AZURE</span><h3>AZ-104 &amp; AZ-700</h3><p>Configure and manage virtual networks for Azure administrators; design and implement Microsoft Azure network solutions.</p></article>
+          <article class="card"><span class="index">CYBERSECURITY</span><h3>Sekurak Academy</h3><p>Netsecurity Master and cybersecurity training through Sekurak.</p></article>
+        </div>
+      </section>
+
+      <section id="beyond">
+        <div class="about-grid">
+          <div><div class="eyebrow">07 / Beyond work</div><h2>Curiosity carries outside the network, too.</h2></div>
+          <div>
+            <p class="about-copy">Outside my day-to-day work, I’m interested in cybersecurity, space engineering and gaming. I also enjoy padel.</p>
+            <div class="facts"><div class="fact"><b>Polish</b><span>Native</span></div><div class="fact"><b>English</b><span>B2</span></div><div class="fact"><b>German</b><span>Basic proficiency (LinkedIn)</span></div><div class="fact"><b>Based in</b><span>Rumia, Poland</span></div></div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" style="padding-bottom:52px">
-        <div class="contact"><div><div class="eyebrow">04 / Contact</div><h2>Let’s connect.</h2><p>Open to conversations about networks, infrastructure and security.</p></div><a class="btn primary" href="https://www.linkedin.com/in/damian-winiarski" target="_blank" rel="noreferrer">Find me on LinkedIn ↗</a></div>
+        <div class="contact"><div><div class="eyebrow">08 / Contact</div><h2>Let’s connect.</h2><p>Open to conversations about network engineering, security and resilient infrastructure.</p></div><a class="btn primary" href="https://www.linkedin.com/in/damian-winiarski" target="_blank" rel="noreferrer">Find me on LinkedIn ↗</a></div>
       </section>
     </main>
     <footer><span>© <span id="year"></span> Damian Winiarski</span><span>BUILT AROUND CONNECTIVITY <span style="color:var(--cyan)">●</span></span></footer>
