@@ -49,7 +49,7 @@
     .btn:hover{transform:translateY(-2px);box-shadow:0 0 22px #00f5d477}
     .tag{transition:color .2s ease,border-color .2s ease,background .2s ease}
     .tag:hover{color:var(--cyan);border-color:var(--cyan);background:#00f5d410}
-    .section-head,.about-grid,.cards,.timeline,.toolkit,.contact{animation:fade-rise .7s both}
+    body.motion-ready .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1)}body.motion-ready .reveal.is-visible{opacity:1;transform:translateY(0)}.cards .card:nth-child(2){transition-delay:.08s}.cards .card:nth-child(3){transition-delay:.16s}.cards .card:nth-child(4){transition-delay:.1s}.cards .card:nth-child(5){transition-delay:.18s}.cards .card:nth-child(6){transition-delay:.26s}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -162,6 +162,22 @@
     </main>
     <footer><span>© <span id="year"></span> Damian Winiarski</span><span>BUILT AROUND CONNECTIVITY <span style="color:var(--cyan)">●</span></span></footer>
   </div>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const revealItems = document.querySelectorAll(".section-head, .about-grid, .cards, .timeline, .toolkit, .contact");
+        revealItems.forEach((item) => item.classList.add("reveal"));
+        document.body.classList.add("motion-ready");
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+    </script>
 </body>
 </html>
