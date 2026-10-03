@@ -104,6 +104,32 @@
     .visual-card .pulse-dot{animation:node-pulse 3.5s ease-in-out infinite}
     .visual-card .flow-line{stroke-dasharray:5 7;animation:network-flow 6s linear infinite}
     @media(max-width:620px){.visual-strip{grid-template-columns:1fr}.visual-card{min-height:160px}.section-visual{grid-template-columns:1fr}.section-visual svg{max-height:120px}}
+    .cards>.card .visual-card{margin:20px -23px -23px;width:calc(100% + 46px);height:124px;min-height:124px;padding:10px 18px;border-top:1px solid #38294e;background:radial-gradient(ellipse at 50% 100%,#00f5d40c,transparent 68%),linear-gradient(135deg,#0b0d17,#11101d);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .cards>.card .visual-card:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 38%,#ffffff08 50%,transparent 62%);transform:translateX(-100%);animation:visual-sweep 6s ease-in-out infinite}
+    .cards>.card .visual-card:after{display:block;content:"";position:absolute;inset:auto 18px 0;height:1px;background:linear-gradient(90deg,transparent,#00f5d466,transparent)}
+    .cards>.card .visual-card svg{width:min(100%,210px);height:110px;max-height:110px;overflow:visible;position:relative;z-index:1;filter:drop-shadow(0 0 7px #00f5d415)}
+    .cards>.card .visual-card svg path,.cards>.card .visual-card svg rect,.cards>.card .visual-card svg circle{vector-effect:non-scaling-stroke}
+    .cards>.card:nth-child(1) .visual-card svg>g:first-child path{stroke-dasharray:5 6;animation:visual-flow 5s linear infinite}
+    .cards>.card:nth-child(1) .visual-card svg>g:last-of-type rect{animation:visual-node 3s ease-in-out infinite}
+    .cards>.card:nth-child(2) .visual-card svg>path:first-of-type{stroke-dasharray:60 180;animation:chart-flow 3.2s linear infinite}
+    .cards>.card:nth-child(2) .visual-card svg>circle{animation:visual-pulse 2s ease-in-out infinite}
+    .cards>.card:nth-child(3) .visual-card svg>path:first-of-type{stroke-dasharray:26 100;animation:visual-flow 3s linear infinite}
+    .cards>.card:nth-child(3) .visual-card svg>circle{animation:visual-pulse 2.8s ease-in-out infinite}
+    .cards>.card:nth-child(4) .visual-card svg>path:first-of-type{transform-origin:60px 38px;animation:shield-breathe 3.2s ease-in-out infinite}
+    .cards>.card:nth-child(4) .visual-card svg>circle{animation:visual-pulse 1.8s ease-in-out infinite}
+    .cards>.card:nth-child(5) .visual-card svg>path:nth-of-type(2){stroke-dasharray:12 8;animation:visual-flow 2.4s linear infinite}
+    .cards>.card:nth-child(5) .visual-card svg>path:last-of-type{animation:radio-pulse 2.8s ease-out infinite}
+    .cards>.card:nth-child(6) .visual-card svg>g path{stroke-dasharray:4 7;animation:visual-flow 4s linear infinite}
+    .cards>.card:nth-child(6) .visual-card svg>circle{transform-box:fill-box;transform-origin:center;animation:team-pulse 3.6s ease-in-out infinite}
+    @keyframes visual-flow{to{stroke-dashoffset:-44}}
+    @keyframes chart-flow{0%{stroke-dashoffset:180;opacity:.45}60%,100%{stroke-dashoffset:0;opacity:1}}
+    @keyframes visual-pulse{0%,100%{opacity:.65;filter:drop-shadow(0 0 1px #00f5d4)}50%{opacity:1;filter:drop-shadow(0 0 7px #00f5d4)}}
+    @keyframes visual-node{0%,100%{filter:drop-shadow(0 0 1px #d6ff00)}50%{filter:drop-shadow(0 0 7px #d6ff00)}}
+    @keyframes shield-breathe{0%,100%{filter:drop-shadow(0 0 2px #8b5cf644)}50%{filter:drop-shadow(0 0 10px #8b5cf6aa)}}
+    @keyframes radio-pulse{0%{opacity:.1;stroke-width:1}45%{opacity:1;stroke-width:3}100%{opacity:.3;stroke-width:1}}
+    @keyframes team-pulse{0%,100%{opacity:.78}50%{opacity:1;filter:drop-shadow(0 0 5px #00f5d4)}}
+    @keyframes visual-sweep{0%,25%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
+    @media(prefers-reduced-motion:reduce){.cards>.card .visual-card:before,.cards>.card .visual-card svg,.cards>.card .visual-card svg *{animation:none!important}}
 </style>
 </head>
 <body>
