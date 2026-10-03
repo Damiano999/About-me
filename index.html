@@ -117,6 +117,10 @@
     @keyframes visual-pulse{0%,100%{opacity:.55;filter:drop-shadow(0 0 1px #00f5d4)}50%{opacity:1;filter:drop-shadow(0 0 7px #00f5d4)}}
     @keyframes visual-sweep{0%,25%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
     @media(prefers-reduced-motion:reduce){#expertise .visual-card:before,#expertise .visual-card svg *{animation:none!important}}
+    #expertise .cards>.card{height:410px;min-height:410px}
+    #expertise .cards>.card .visual-card{margin-top:auto;flex:0 0 100px;height:100px;min-height:100px}
+    @media(max-width:760px){#expertise .cards>.card{height:410px;min-height:410px}}
+    @media(max-width:480px){#expertise .cards>.card{height:390px;min-height:390px}}
 </style>
 </head>
 <body>
