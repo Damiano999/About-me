@@ -170,12 +170,13 @@
 
     /* Nordic cyber aesthetic: cool fjord tones, crisp contrast and restrained warm highlights. */
     :root{--bg:#071018;--panel:#0b1720;--line:#263b47;--muted:#b8c8ce;--text:#f2f8f8;--cyan:#8be3df;--blue:#6baec4;--lime:#e9c982}
-    body{background:radial-gradient(ellipse at 78% 8%,#143449 0,transparent 34%),radial-gradient(ellipse at 4% 46%,#09262b 0,transparent 32%),var(--bg)}
+    body{background:radial-gradient(ellipse at 78% 8%,#143449 0,transparent 34%),radial-gradient(ellipse at 4% 46%,#09262b 0,transparent 32%),var(--bg)!important}
     body:before{opacity:.09;background-image:linear-gradient(#9ddde018 1px,transparent 1px),linear-gradient(90deg,#9ddde018 1px,transparent 1px)}
     #expertise .cards>.card .visual-card svg{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;transform:none!important}
     #expertise .cards>.card .visual-card svg text{font-size:9px!important}
     .company-logo.eltel{width:156px!important;min-width:156px!important;max-width:156px!important;height:48px!important;flex:0 0 156px!important;overflow:hidden!important}
-    .company-logo.eltel img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;transform:scale(2.7)!important;transform-origin:center!important}
+    .company-logo.eltel{position:relative!important}
+    .company-logo.eltel img{position:absolute!important;left:50%!important;top:50%!important;display:block!important;width:180px!important;height:auto!important;max-width:none!important;max-height:none!important;object-fit:unset!important;transform:translate(-50%,-50%)!important}
     @media(max-width:480px){.company-logo.eltel{width:144px!important;min-width:144px!important;max-width:144px!important;height:44px!important;flex-basis:144px!important}}
 \n  </style>
 </head>
