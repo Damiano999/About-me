@@ -6,9 +6,6 @@
   <meta name="theme-color" content="#07111d">
   <meta name="description" content="Damian Winiarski — network and security specialist. Professional experience, technical toolkit, education and cybersecurity interests.">
   <title>Damian Winiarski | Networks & Security</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{color-scheme:dark;--bg:#070711;--panel:#0d0d1a;--line:#2c2342;--muted:#aaa4bd;--text:#f4f0ff;--cyan:#00f5d4;--blue:#8b5cf6;--lime:#d6ff00;--pink:#ff3cac;--ink:#070711}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 79% 7%,#1d1140 0,transparent 31%),radial-gradient(ellipse at 3% 43%,#071f2c 0,transparent 30%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.7}
@@ -201,6 +198,35 @@
     .security-tooltip strong{color:var(--cyan)}
     .security-trigger:hover .security-tooltip,.security-trigger:focus .security-tooltip{opacity:1;visibility:visible;transform:translateY(0)}
     .security-beacon{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+
+
+    /* Performance: preserve the visual identity while avoiding costly full-screen effects. */
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .mono,.eyebrow,.navlinks,.tag,.label,.status,.tool-label,
+    .term-title,.term-foot,.when,.company-name { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; }
+    .topbar { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: rgba(9,16,22,.94) !important; }
+    body:before { animation: none !important; }
+    body:after,.hero:before { animation: none !important; filter: none !important; opacity: .55; }
+    .bg-network { opacity: .18 !important; }
+    .bg-network .link,.bg-network .node { animation: none !important; filter: none !important; }
+    .terminal { animation: fade-rise .55s ease-out both !important; box-shadow: 0 12px 38px #0007 !important; }
+    .terminal:after { animation: none !important; }
+    .network,.network g[stroke-dasharray] { animation: none !important; }
+    h1 span { animation: none !important; }
+    .pulse:after { animation: none !important; display: none; }
+    .card,.item { box-shadow: inset 0 1px #d9f0ed08 !important; }
+    .card:hover,.item:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #0005 !important; }
+    .visual-card .glow { filter: none !important; }
+    .visual-card .pulse-dot,.visual-card .flow-line { animation: none !important; }
+    .curiosity-visual svg *, .curiosity-visual:before, .curiosity-visual:after { animation-duration: 0s !important; }
+    .company-logo img { content-visibility: auto; }
+    @media (max-width: 760px) {
+      .bg-network { opacity: .10 !important; }
+      .bg-network .link { stroke-dasharray: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
 
   </style>
 </head>
