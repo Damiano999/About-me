@@ -193,8 +193,13 @@
     .eyebrow:after{content:"✧";color:var(--lime);font:12px/1 Manrope,sans-serif;margin-left:2px;text-shadow:0 0 8px #e7cb8b55}
     section:after{width:78px;height:7px;background:repeating-linear-gradient(135deg,transparent 0 5px,#91e2dc70 5px 6px,transparent 6px 11px),repeating-linear-gradient(45deg,transparent 0 5px,#91e2dc45 5px 6px,transparent 6px 11px);opacity:.42}
     #beyond .curiosity-visual{border-color:#48646a;background:linear-gradient(120deg,#10212a,#0b171d)}
-    .security-disclosure{max-width:900px;padding:0 0 24px;color:var(--muted);font:11px/1.6 Manrope,sans-serif}
-    .security-disclosure strong{color:var(--text)}
+    .security-disclosure{display:flex;justify-content:flex-end;padding:0 0 20px}
+    .security-trigger{position:relative;display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;cursor:help;outline:none}
+    .security-trigger>img{display:block;width:40px;height:40px;object-fit:contain;image-rendering:pixelated}
+    .security-trigger:focus-visible{outline:1px solid var(--cyan);outline-offset:3px}
+    .security-tooltip{position:absolute;right:0;bottom:calc(100% + 8px);z-index:20;width:min(330px,calc(100vw - 42px));padding:11px 13px;border:1px solid #91e2dc88;border-radius:4px;background:#0b171d;color:var(--text);font:12px/1.55 Manrope,sans-serif;letter-spacing:normal;text-align:left;box-shadow:0 8px 24px #0009;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .16s ease,transform .16s ease,visibility .16s}
+    .security-tooltip strong{color:var(--cyan)}
+    .security-trigger:hover .security-tooltip,.security-trigger:focus .security-tooltip{opacity:1;visibility:visible;transform:translateY(0)}
     .security-beacon{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
 
   </style>
@@ -446,7 +451,7 @@
       </section>
     </main>
     <footer><span>© <span id="year"></span> Damian Winiarski</span><span>BUILT AROUND CONNECTIVITY <span style="color:var(--cyan)">●</span></span></footer>
-    <div class="security-disclosure"><strong>Security notice:</strong> This site loads a 1×1 Canarytokens image for security monitoring. The request may disclose your IP address, browser details, and time of access to Canarytokens.</div>
+    <div class="security-disclosure"><span class="security-trigger" tabindex="0" role="group" aria-label="Security notice. Hover or focus for details." aria-describedby="security-disclosure-note"><img src="assets/canary-hacker.png" alt="" width="40" height="40"><span class="security-tooltip" id="security-disclosure-note" role="tooltip"><strong>Security notice:</strong> This site loads a 1×1 Canarytokens image for security monitoring. The request may disclose your IP address, browser details, and time of access to Canarytokens.</span></span></div>
     <img class="security-beacon" src="http://canarytokens.com/about/traffic/eqzqpjtqfqp9b4xvmd3xi7vcl/icon.gif" alt="" aria-hidden="true" width="1" height="1" referrerpolicy="no-referrer">
   </div>
   <script>
