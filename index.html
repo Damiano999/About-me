@@ -229,13 +229,14 @@
     }
 
 
-    .project-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .project-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
     .project-card{display:flex;flex-direction:column;min-height:330px}
     .project-card h3{font-size:22px;margin-top:19px}
     .project-card p{font-size:13px}
     .project-card .tags{margin-top:auto;padding-top:18px}
     .project-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}
     .project-links .btn{font-size:10px}
+    @media(max-width:900px){.project-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:620px){.project-cards{grid-template-columns:1fr}.project-card{min-height:0}}
 
   </style>
@@ -397,6 +398,13 @@
             <p>A browser-based study tool for CompTIA Security+ SY0-701 and Microsoft Azure AZ-700, with timed mock exams, domain practice, answer explanations, and a searchable glossary.</p>
             <div class="tags"><span class="tag">750 SECURITY+ QUESTIONS</span><span class="tag">AZURE NETWORKING</span><span class="tag">STUDY MODE</span></div>
             <div class="project-links"><a class="btn primary" href="https://damiano999.github.io/Quiz/" target="_blank" rel="noreferrer">Open project ↗</a><a class="btn" href="https://github.com/Damiano999/Quiz" target="_blank" rel="noreferrer">View source ↗</a></div>
+          </article>
+          <article class="card project-card">
+            <span class="index">NETWORK DIAGNOSTICS · HTML · JAVASCRIPT</span>
+            <h3>Network Tester</h3>
+            <p>A browser-based connection diagnostics tool that measures ping, jitter, download and upload speed. It also includes DNS lookup, recent test history, connection quality guidance, and PDF report export.</p>
+            <div class="tags"><span class="tag">PING &amp; JITTER</span><span class="tag">SPEED TEST</span><span class="tag">DNS LOOKUP</span><span class="tag">PDF REPORT</span></div>
+            <div class="project-links"><a class="btn primary" href="https://damiano999.github.io/Network-tester/" target="_blank" rel="noreferrer">Open project ↗</a><a class="btn" href="https://github.com/Damiano999/Network-tester" target="_blank" rel="noreferrer">View source ↗</a></div>
           </article>
           <article class="card project-card">
             <span class="index">JAVASCRIPT · 2D / 3D · RESPONSIVE</span>
