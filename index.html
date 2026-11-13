@@ -228,6 +228,16 @@
       *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
 
+
+    .project-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .project-card{display:flex;flex-direction:column;min-height:330px}
+    .project-card h3{font-size:22px;margin-top:19px}
+    .project-card p{font-size:13px}
+    .project-card .tags{margin-top:auto;padding-top:18px}
+    .project-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}
+    .project-links .btn{font-size:10px}
+    @media(max-width:620px){.project-cards{grid-template-columns:1fr}.project-card{min-height:0}}
+
   </style>
 </head>
 <body>
@@ -243,7 +253,7 @@
   <div class="wrap">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Damian Winiarski home">DW<span>.</span></a>
-      <nav class="navlinks" aria-label="Main navigation"><a href="#about">PROFILE</a><a href="#expertise">EXPERTISE</a><a href="#career">CAREER</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a></nav>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#about">PROFILE</a><a href="#expertise">EXPERTISE</a><a href="#projects">PROJECTS</a><a href="#career">CAREER</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a></nav>
     </header>
     <main>
       <section class="hero" id="home" style="border:0">
@@ -376,6 +386,26 @@
           <article class="card"><span class="index">06 — COLLABORATION</span><h3>Working across teams</h3><p>Coordinate with network service providers, penetration testing specialists, and Data Center colleagues. Provide remote support to field teams and end users.</p><div class="visual-card"><svg viewBox="0 0 240 120" role="img" aria-label="Network, security and data center teams working together" preserveAspectRatio="none"><g transform="translate(0 0) scale(1 1.05)"><rect x="14" y="20" width="58" height="65" rx="4" fill="#0c111b" stroke="#00f5d4"/><rect x="91" y="12" width="58" height="73" rx="4" fill="#11101e" stroke="#a779ff"/><rect x="168" y="20" width="58" height="65" rx="4" fill="#0c111b" stroke="#ff3cac"/><text x="43" y="31" text-anchor="middle" fill="#99eee4" font-size="7.5" font-family="monospace">NETWORK</text><text x="120" y="23" text-anchor="middle" fill="#d4c0ff" font-size="7.5" font-family="monospace">OPERATIONS</text><text x="197" y="31" text-anchor="middle" fill="#ffc5e3" font-size="7.5" font-family="monospace">SECURITY</text><g fill="#11101b" stroke-width="1.5"><circle cx="43" cy="48" r="7" stroke="#00f5d4"/><circle cx="120" cy="43" r="7" stroke="#a779ff"/><circle cx="197" cy="48" r="7" stroke="#ff3cac"/></g><path d="M31 69q1-13 12-13t12 13v4H31Zm77 1q1-13 12-13t12 13v4h-24Zm77-1q1-13 12-13t12 13v4h-24Z" fill="#121522" stroke="#51406f"/><rect x="29" y="78" width="28" height="3" rx="1.5" fill="#00f5d4"/><rect x="106" y="78" width="28" height="3" rx="1.5" fill="#a779ff"/><rect x="183" y="78" width="28" height="3" rx="1.5" fill="#ff3cac"/><path class="flow" d="M72 53h19m58 0h19" stroke="#d6ff00" stroke-width="1.7" stroke-dasharray="4 4"/><path d="m84 49 6 4-6 4m70-8-6 4 6 4" fill="none" stroke="#d6ff00" stroke-width="1.5"/><text x="120" y="98" text-anchor="middle" fill="#958aa8" font-size="7.5" font-family="monospace">SHARED OWNERSHIP · CLEAR HANDOVERS</text></g></svg></div></article>
         </div>
 
+      </section>
+
+      <section id="projects">
+        <div class="section-head"><div><div class="eyebrow">03 / Selected projects</div><h2>Projects built beyond the day job.</h2></div><p>Independent browser-based projects combining practical problem solving, technical learning, and clear user workflows.</p></div>
+        <div class="cards project-cards">
+          <article class="card project-card">
+            <span class="index">SECURITY+ · AZURE AZ-700 · HTML</span>
+            <h3>Certification Practice Lab</h3>
+            <p>A browser-based study tool for CompTIA Security+ SY0-701 and Microsoft Azure AZ-700, with timed mock exams, domain practice, answer explanations, and a searchable glossary.</p>
+            <div class="tags"><span class="tag">750 SECURITY+ QUESTIONS</span><span class="tag">AZURE NETWORKING</span><span class="tag">STUDY MODE</span></div>
+            <div class="project-links"><a class="btn primary" href="https://damiano999.github.io/Quiz/" target="_blank" rel="noreferrer">Open project ↗</a><a class="btn" href="https://github.com/Damiano999/Quiz" target="_blank" rel="noreferrer">View source ↗</a></div>
+          </article>
+          <article class="card project-card">
+            <span class="index">JAVASCRIPT · 2D / 3D · RESPONSIVE</span>
+            <h3>Agility map</h3>
+            <p>A browser-based editor for designing dog agility courses. Arrange obstacles on a 2D plan, edit the route, and inspect the layout in a 3D view.</p>
+            <div class="tags"><span class="tag">COURSE DESIGN</span><span class="tag">2D &amp; 3D VIEWS</span><span class="tag">JSON IMPORT / EXPORT</span></div>
+            <div class="project-links"><a class="btn primary" href="https://damiano999.github.io/Agility/" target="_blank" rel="noreferrer">Open project ↗</a><a class="btn" href="https://github.com/Damiano999/Agility" target="_blank" rel="noreferrer">View source ↗</a></div>
+          </article>
+        </div>
       </section>
 
       <section id="career">
